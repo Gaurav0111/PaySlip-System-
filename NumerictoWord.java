@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 public class NumerictoWord {
 
     static String wording(int num) {
@@ -85,6 +87,7 @@ public class NumerictoWord {
                 str = "ninety ";
                 break;
             default:
+                // str = "  ";
                 break;
         }
         return str;
@@ -133,30 +136,42 @@ public class NumerictoWord {
             if (count == 10) {
                 String str1 = wording(num % 10);
                 str += str1;
-                str += "Arab ";
+                if(str1!=""){
+                    str += "Arab ";
+                }
             } else if (count == 8) {
                 String str1 = wording(num % 10);
                 str += str1;
-                str += "crore ";
+                if(str1!=""){
+                    str += "crore ";
+                }
             } else if (count == 6) {
                 String str1 = wording(num % 10);
                 str += str1;
-                str += "lakh ";
+                if(str1!=""){
+                    str += "lakh ";
+                }
             } else if (count == 4) {
                 String str1 = wording(num % 10);
                 str += str1;
-                str += "thousand ";
+                if(str1!=""){
+                    str += "thousand ";
+                }
             } else if (count == 3) {
                 String str1 = wording(num % 10);
                 str += str1;
-                str += "hundered ";
+                if(str1!=""){
+                    str += "hundered ";
+                }
             }
         }
         return str;
     }
 
     public static void main(String[] args) {
-        int num = 1121212111;
+        int num = 5000000;
+        long num1 = 7894561278987453754L;
+        BigInteger num2 = new BigInteger("9874563654256546513213218498432131351684363869843861123654789");
         System.out.println(convert(num, "", 0, num) + "only");
     }
 }
