@@ -5,6 +5,7 @@ import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.Date;
 import java.util.Locale;
+// import NumerictoWord;
 
 public class PayrollApplication extends JFrame {
     private JLabel idLabel, nameLabel, salaryLabel, companyNameLabel, companyAddresslabel,dateLabel ;
@@ -96,6 +97,7 @@ public class PayrollApplication extends JFrame {
             resultArea.append(" TA: " + currencyFormat(ta) + "\n");
             resultArea.append(" Gross Salary: " + currencyFormat(gs) + "\n");
             resultArea.append("Net Salary: " + currencyFormat(ns) + "\n");
+            resultArea.append("In Words: " + NumerictoWord.convert((int)ns, "", 0, (int)ns)+ "\n");
             resultArea.setBounds(20, 230, 500, 300);
             companyAddresslabel.setBounds(30,150,600,20);
             setSize(600, 500);
