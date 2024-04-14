@@ -8,7 +8,6 @@ import java.util.Date;
 import java.util.Locale;
 
 public class PayrollApplicationGUI extends JFrame {
-<<<<<<< HEAD
     private JLabel idLabel, nameLabel, salaryLabel, companyInfoLabelName, companyInfoLabelAddress, companyInfoLabelEmail, dateLabel, empname, empid ;
     
     private JTextField idField, nameField, salaryField;
@@ -20,13 +19,10 @@ public class PayrollApplicationGUI extends JFrame {
     JSeparator separator3 = new JSeparator(SwingConstants.HORIZONTAL);
     JSeparator separator2 = new JSeparator(SwingConstants.VERTICAL);
 
-    private JButton calculateButton;
-    private JLabel grossSalaryLabel, hraLabel, taLabel, maLabel, daLabel, pfLabel, taxLabel, netSalaryLabel;
 
     public PayrollApplicationGUI() {
         setTitle("Payroll Application");
         setSize(1080, 900);
-        setSize(800, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); 
         setResizable(false);
@@ -54,17 +50,6 @@ public class PayrollApplicationGUI extends JFrame {
     private void initComponents() {
         ImageIcon imageIcon = new ImageIcon("logo.png");
         imageLabel = new JLabel(imageIcon);
-        setLocationRelativeTo(null); 
-        setResizable(false);
-
-        initComponents();
-        initLayout();
-        addActionListeners();
-
-        setVisible(true);
-    }
-
-    private void initComponents() {
         idLabel = new JLabel("Employee ID:");
         nameLabel = new JLabel("Name:");
         salaryLabel = new JLabel("Basic Salary:");
@@ -77,36 +62,6 @@ public class PayrollApplicationGUI extends JFrame {
         empid = new JLabel("Employee ID: ");
         earnings = new JLabel("Earnings");
         deduction = new JLabel("Deduction");
-=======
-    private JLabel idLabel, nameLabel, salaryLabel, companyInfoLabelName,companyInfoLabelAddress,companyInfoLabelEmail ,dateLabel;
-    private JTextField idField, nameField, salaryField;
-    private JButton calculateButton;
-    private JLabel grossSalaryLabel, hraLabel, taLabel, maLabel, daLabel, pfLabel, taxLabel, netSalaryLabel;
-
-    public PayrollApplicationGUI() {
-        setTitle("Payroll Application");
-        setSize(800, 700);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null); 
-        setResizable(false);
-
-        initComponents();
-        initLayout();
-        addActionListeners();
-
-        setVisible(true);
-    }
-
-    private void initComponents() {
-        idLabel = new JLabel("Employee ID:");
-        nameLabel = new JLabel("Name:");
-        salaryLabel = new JLabel("Basic Salary:");
-        idField = new JTextField(10);
-        nameField = new JTextField(20);
-        salaryField = new JTextField(10);
-        calculateButton = new JButton("Calculate");
-
->>>>>>> e32c906e67125298d53056f652de67415b3b3904
         grossSalaryLabel = new JLabel("Gross Salary:");
         hraLabel = new JLabel("HRA:");
         taLabel = new JLabel("TA:");
@@ -115,10 +70,7 @@ public class PayrollApplicationGUI extends JFrame {
         pfLabel = new JLabel("PF:");
         taxLabel = new JLabel("Tax:");
         netSalaryLabel = new JLabel("Net Salary:");
-<<<<<<< HEAD
         netSalaryWordsLabel = new JLabel("Net Salary in Words:");
-=======
->>>>>>> e32c906e67125298d53056f652de67415b3b3904
 
         // Pre-filled company information
         companyInfoLabelName = new JLabel("Company Name: DIT University");
@@ -128,7 +80,6 @@ public class PayrollApplicationGUI extends JFrame {
     }
 
     private void initLayout() {
-<<<<<<< HEAD
         getContentPane().setLayout(null);
         imageLabel.setBounds(780, 0, 300, 50);
 
@@ -204,68 +155,6 @@ public class PayrollApplicationGUI extends JFrame {
         getContentPane().add(dateLabel);
     }
 
-=======
-        JPanel inputPanel = new JPanel(new GridLayout(3, 2, 5, 5));
-        inputPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        inputPanel.add(idLabel);
-        inputPanel.add(idField);
-        inputPanel.add(nameLabel);
-        inputPanel.add(nameField);
-        inputPanel.add(salaryLabel);
-        inputPanel.add(salaryField);
-        
-        JPanel calculatePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        calculatePanel.add(calculateButton);
-        
-        JPanel outputPanel = new JPanel(new GridLayout(12, 2, 5, 5)); // Increased rows to accommodate all payroll elements
-        outputPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        outputPanel.add(grossSalaryLabel);
-        outputPanel.add(new JLabel()); 
-        outputPanel.add(hraLabel);
-        outputPanel.add(new JLabel()); 
-        outputPanel.add(taLabel);
-        outputPanel.add(new JLabel()); 
-        outputPanel.add(maLabel);
-        outputPanel.add(new JLabel()); 
-        outputPanel.add(daLabel);
-        outputPanel.add(new JLabel()); 
-        outputPanel.add(pfLabel);
-        outputPanel.add(new JLabel()); 
-        outputPanel.add(taxLabel);
-        outputPanel.add(new JLabel()); 
-        outputPanel.add(netSalaryLabel);
-        outputPanel.add(new JLabel()); 
-        
-        JPanel infoPanel = new JPanel(new GridLayout(4, 1));
-        infoPanel.setBorder(BorderFactory.createEmptyBorder(20, 10, 10, 10)); 
-        infoPanel.add(companyInfoLabelName);
-        infoPanel.add(companyInfoLabelEmail);
-        infoPanel.add(companyInfoLabelAddress);
-        infoPanel.add(dateLabel);
-        JSeparator separator1 = new JSeparator(SwingConstants.HORIZONTAL);
-        separator1.setPreferredSize(new Dimension(400, 1));
-        JSeparator separator2 = new JSeparator(SwingConstants.HORIZONTAL);
-        separator2.setPreferredSize(new Dimension(400, 1));
-        
-        JPanel mainPanel = new JPanel(new BorderLayout());
-        mainPanel.add(inputPanel, BorderLayout.NORTH);
-        mainPanel.add(separator1, BorderLayout.CENTER);
-        mainPanel.add(calculatePanel, BorderLayout.CENTER);
-        mainPanel.add(outputPanel, BorderLayout.AFTER_LAST_LINE);
-        mainPanel.add(separator2, BorderLayout.SOUTH);
-        mainPanel.add(infoPanel, BorderLayout.WEST); 
-        
-        JPanel containerPanel = new JPanel(new BorderLayout());
-        containerPanel.add(mainPanel, BorderLayout.NORTH);
-    
-        setSize(800, 700);
-        
-        add(containerPanel);
-    }
-    
-    
-
->>>>>>> e32c906e67125298d53056f652de67415b3b3904
     private void addActionListeners() {
         calculateButton.addActionListener(new ActionListener() {
             @Override
@@ -311,19 +200,17 @@ public class PayrollApplicationGUI extends JFrame {
             setLabelText(pfLabel, currencyFormat(pf));
             setLabelText(taxLabel, currencyFormat(tax));
             setLabelText(netSalaryLabel, currencyFormat(ns));
-<<<<<<< HEAD
             setLabelText(empname, name);
             setLabelText(empid, Integer.toString(id));
-            setLabelText(netSalaryWordsLabel, NumerictoWord.convert((int)ns,"",0,(int)ns)+"rupees only");
-=======
->>>>>>> e32c906e67125298d53056f652de67415b3b3904
+
+            // Convert net salary to words
+            setLabelText(netSalaryWordsLabel,  NumerictoWord.convert((int)ns,"",0,(int)ns)+"rupees only");
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this, "Please enter valid numeric values for ID and Salary.",
                     "Input Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
-<<<<<<< HEAD
     static String properCase(String name) {
         String fullName = "";
         String names[] = name.split(" ");
@@ -334,8 +221,6 @@ public class PayrollApplicationGUI extends JFrame {
         return fullName;
     }
 
-=======
->>>>>>> e32c906e67125298d53056f652de67415b3b3904
     private double computeTax(double gs) {
         double annual = gs * 12;
         if (annual > 500000 && annual < 700000) {
@@ -350,7 +235,6 @@ public class PayrollApplicationGUI extends JFrame {
 
     private void setLabelText(JLabel label, String text) {
         label.setText(label.getText() + " " + text);
-<<<<<<< HEAD
     }
 
     private String currencyFormat(double val) {
@@ -364,27 +248,6 @@ public class PayrollApplicationGUI extends JFrame {
         return dateFormat.format(new Date());
     }
     
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new PayrollApplicationGUI();
-            }
-        });
-=======
->>>>>>> e32c906e67125298d53056f652de67415b3b3904
-    }
-
-    private String currencyFormat(double val) {
-        NumberFormat obj = NumberFormat.getCurrencyInstance(Locale.US);
-        return obj.format(val);
-    }
-
-    private String getCurrentDate() {
-        DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.SHORT, Locale.US);
-        return dateFormat.format(new Date());
-    }
-
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
