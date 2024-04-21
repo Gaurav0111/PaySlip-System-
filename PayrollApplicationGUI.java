@@ -204,7 +204,7 @@ public class PayrollApplicationGUI extends JFrame {
             setLabelText(empid, Integer.toString(id));
 
             // Convert net salary to words
-            setLabelText(netSalaryWordsLabel,  NumerictoWord.convert((int)ns,"",0,(int)ns)+"rupees only");
+            setLabelText(netSalaryWordsLabel,  properCase(NumerictoWord.convert((int)ns,"",0,(int)ns)+"rupees only"));
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this, "Please enter valid numeric values for ID and Salary.",
                     "Input Error", JOptionPane.ERROR_MESSAGE);
